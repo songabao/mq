@@ -1,0 +1,17 @@
+
+server:
+  port: 8910
+spring:
+  rabbitmq:
+    port: 5672
+    password: guest
+    username: guest
+    host: localhost
+    publisher-returns: true
+    publisher-confirms: true
+    #开启ACK消息自动确定功能
+    listener:
+      simple:
+        acknowledge-mode: manual
+      direct:
+        acknowledge-mode: manual
